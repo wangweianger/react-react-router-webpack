@@ -1,0 +1,42 @@
+{
+  "name": "react-webpack-babel",
+  "version": "0.0.3",
+  "description": "React Webpack Babel Starter Kit",
+  "main": "''",
+  "scripts": {
+    "dev": "webpack-dev-server -d --watch --port 8888 --inline --hot --colors --config build/webpack.dev.config.js",
+    "test": "webpack -d --progress --hide-modules --colors --config build/webpack.test.config.js",
+    "build": "webpack -p --progress --hide-modules --colors --config build/webpack.product.config.js"
+  },
+  "author": "wanwei",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "6.14.0",
+    "babel-loader": "6.2.4",
+    "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "6.14.0",
+    "babel-preset-stage-2": "^6.11.0",
+    "babel-preset-react": "6.11.1",
+    "babel-runtime": "^6.11.6",
+    "eslint-plugin-react": "^6.2.2",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "jquery": "^3.1.0",
+    "url-loader": "0.5.7",
+    "string-replace-webpack-plugin": "^0.0.3",
+    "style-loader": "0.13.1",
+    "css-loader": "0.25.0",
+    "node-sass": "^3.9.2",
+    "bootstrap": "^4.0.0-alpha.3",
+    "react": "15.3.0",
+    "react-dom": "15.3.0",
+    "react-hot-loader": "1.3.0",
+    "sass-loader": "^4.0.1",
+    "webpack": "1.13.2",
+    "webpack-cleanup-plugin": "^0.3.0",
+    "webpack-dev-server": "1.15.1"
+  }
+}
