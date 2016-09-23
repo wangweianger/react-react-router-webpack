@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack",
+  "name": "react-webpack-babel",
   "version": "0.0.3",
-  "description": "React Webpack Babel",
+  "description": "React Webpack Babel Starter Kit",
   "main": "''",
   "scripts": {
     "dev": "webpack-dev-server -d --watch --port 8888 --inline --hot --colors --config build/webpack.dev.config.js",

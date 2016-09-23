@@ -8,7 +8,6 @@ module.exports = {
 	entry: {
 		main:path.resolve(__dirname, '../src/index.jsx'),
 	},
-	// devtool: process.env.WEBPACK_DEVTOOL || 'cheap-module-source-map',
 	output: {
 		path: path.resolve(__dirname, '../dist'),
         publicPath: '/',
@@ -67,7 +66,7 @@ module.exports = {
 		//自动生成html文件
         new htmlWebpackPlugin({
             title:"首页",
-            template:path.resolve(__dirname, '../src/template.html'),
+            template:path.resolve(__dirname, '../src/index.html'),
             inject: true,
             hash: true,
             cache: true,

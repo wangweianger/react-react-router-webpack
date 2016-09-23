@@ -1,0 +1,180 @@
+/*CSS Reset*/
+*, *:before, *:after { -webkit-box-sizing: border-box; box-sizing: border-box; }
+body{background: #FFFFFF;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, header, hgroup, nav, section, article, aside, footer, figure, figcaption, menu, button { margin: 0; padding: 0; }
+body { font-family:  Helvetica, STHeiTi, Sans-serif; line-height: 1.5; font-size: 14px; color: #333; -webkit-text-size-adjust: none; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); outline: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: normal; }
+table { border-collapse: collapse; border-spacing: 0; }
+fieldset, img { border: 0; }
+li { list-style: none; }
+input, textarea, select { font-family: inherit; font-size: inherit; font-weight: inherit; outline: none; -webkit-appearence: none; -ms-appearence: none; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { border: none; background: none; -webkit-appearance: none; outline: none; }
+a { -webkit-touch-callout: none; text-decoration: none; outline: 0; color:#6f8fb7;text-decoration:none;}
+em, i { font-style: normal; }
+iframe { display: none; }
+::-webkit-input-placeholder {
+    color: #999;
+}
+input[type=checkbox]{transform:scale(1.2,1.2);-webkit-transform:scale(1.2,1.2)}
+.btn, .btn:focus {outline: none !important;}
+
+// sass相关备注
+$htmlcolor:#333;//全局字体颜色 
+$fontCorlor:#333;//字体全局颜色
+$lightcolor:#88898c;//文字淡色
+$activecolor:#c6cad0;//active背景颜色 
+$acolor:#6f8fb7;//全局a颜色
+$ahovercolor:#e47054;// 全局a:hover颜色
+$bordercolor:#d8d4d4;//边框颜色值
+$red:#c9302c; //红色
+$green:#449d44; //绿色
+$mainColor:#337ab7;//buton主要色调
+
+// 增加相关样式 youwei 2016/8/13 10:58:17
+.input-inline{
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+//一些列的边距样式
+.m5{margin: 5px;}
+.m10{margin: 10px;}
+.m15{margin: 15px;}
+.m20{margin: 20px;}
+.mt5{margin-top: 5px;}
+.mt10{margin-top: 10px;}
+.mt15{margin-top: 15px;}
+.mt20{margin-top: 20px;}
+.ml5{margin-left: 5px;}
+.ml10{margin-left: 10px;}
+.ml15{margin-left: 15px;}
+.ml20{margin-left: 20px;}
+.ml30{margin-left: 30px;}
+.mr5{margin-right: 5px;}
+.mr10{margin-right: 10px;}
+.mr15{margin-right: 15px;}
+.mr20{margin-right: 20px;}
+.mb5{margin-bottom: 5px;}
+.mb10{margin-bottom: 10px;}
+.mb15{margin-bottom: 15px;}
+.mb20{margin-bottom: 20px;}
+.mb30{margin-bottom: 30px;}
+.pd5{padding:5px;}
+.pd15{padding:15px;}
+.no_pd_b{padding-bottom:0;}
+.pdl15{padding-left: 15px;}
+.pdr15{padding-right: 15px;}
+.pdtb15{padding:15px 0;}
+.userSelect{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+//-----一些列的边距样式结束-----
+
+//等待加载样式
+#loading{display:none;background: url(../images/loading_1.gif) rgba(12,12,12,.2) no-repeat center center;position: fixed;z-index:10000;width: 100%;height: 100%;top:0;left:0;}
+//--------等待加载样式结束---------
+
+//字体相关样式
+html,body {color: $htmlcolor !important;}
+.topMenu {background:#313338  !important;}
+.fontCorlor {color: $fontCorlor !important;}
+a:hover{color:$ahovercolor !important;text-decoration:none;}
+.slideLeft {background: #e6e7e8 !important;}
+.open{background: #dfe0e2 !important;}
+.tiniestsize{font-size:12px !important;}
+.smasize{font-size:13px !important;}
+.smallsize{font-size:14px !important;}
+.middlesize{font-size:16px !important;}
+.largesize{font-size:20px !important;}
+.bigsize{font-size:24px !important;}
+.bigmoresize{font-size:28px !important;}
+.clear{clear:both}
+.overflow{overflow:hidden;}
+.yahei {font-family: "微软雅黑";}
+.blod{font-weight:blod!important;}
+.normal{font-weight:normal!important;}
+.cursor{cursor: pointer;}
+.maincolor{color:$mainColor!important;}
+.red{color:$red!important;}
+.green{color:$green!important;}
+.errorClass{background:#fdf4f4;border:solid 1px #fba7a7 !important;}
+.inp_com_w{width:320px!important;}
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.float-left{float:left;}
+.float-right{float:right;}
+.inline_block{display:inline-block!important;}
+.comm_conent_padding {padding-left:20px;}
+.w-50{width:50px!important;}
+.w-80{width:80px!important;}
+.w-100{width:100px!important;}
+.w-150{width:150px!important;}
+.w-200{width:200px!important;}
+.w-250{width:250px!important;}
+.w-280{width:250px!important;}
+.w-300{width:300px!important;}
+.w-400{width:400px!important;}
+.w-500{width:500px!important;}
+.b-5{width:5%!important}
+.b-8{width:8.333%!important}
+.b-10{width:10%!important}
+.b-12{width:12%!important}
+.b-13{width:13%!important}
+.b-15{width:18%!important}
+.b-18{width:18%!important}
+.b-20{width:20%!important}
+.b-25{width:25%!important}
+.h-20{height:20px!important;line-height:20px;}
+.h-25{height:25px!important;line-height:25px;}
+.h-30{height:30px!important;line-height:30px;}
+.h-35{height:35px!important;line-height:35px;}
+.h-40{height:40px!important;line-height:40px;}
+//select 标记样式
+.whitebj{border:solid 1px #979795;color:#979795;box-shadow:0 0 5px #979795;}
+.greenbj{border:solid 1px green;color:green;box-shadow:0 0 5px green;}
+.redbj{border:solid 1px red;color:red;box-shadow:0 0 5px red;}
+.yellowbj{border:solid 1px #99a910;color:#99a910;box-shadow:0 0 5px #99a910;}
+.bluebj{border:solid 1px #412ef8;color:#412ef8;box-shadow:0 0 5px #412ef8;}
+//--------字体相关样式结束------
+
+
+//----禁止选中样式结束-----
+
+//阿里icon样式
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1473758732_8294659.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1473758732_8294659.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1473758732_8294659.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1473758732_8294659.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1473758732_8294659.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+                    
+@mixin icon-font ($sizing) {
+    font-family:"iconfont";
+	font-size:$sizing;
+	font-style:normal;
+	vertical-align: middle;
+}
+.iconfont{@include icon-font(16px)}
+.smalliconfont{@include icon-font(12px)}
+.middleiconfont{@include icon-font(15px)}
+.largeiconfont{@include icon-font(18px)}
+.bigiconfont{@include icon-font(20px)}
+//------阿里icon样式结束--------
+
+@import 'common.scss';
+
+//移动端公共样式
+@media (max-width: 768px) { 
+  .comm_conent_padding {padding:10px;}
+}
+
+
