@@ -17,7 +17,7 @@ class User extends Component {
 		        <div className="tc mt20 largesize">
 		          	{this.props.datas.map(item => (
 			            <li key={item.id}>
-			            	<Link to={{pathname:"/userDetails/",query:{id:item.id}}} >{item.name}</Link>
+			            	<Link to="/user/userDetails" >{item.name}</Link>
 				            <span className="ml15">{item.time}</span>
 			            </li>
 			        ))}
@@ -27,3 +27,5 @@ class User extends Component {
   	}
 }
 module.exports = User
+
+//to={`/user/userDetails/${item.id}`} 
