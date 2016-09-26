@@ -6,7 +6,7 @@ var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
 module.exports = {
 	entry: {
-		main:path.resolve(__dirname, '../src/index.jsx'),
+		main:path.resolve(__dirname, '../src/main.js'),
 	},
 	output: {
 		path: path.resolve(__dirname, '../dist'),

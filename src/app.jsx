@@ -1,16 +1,20 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from './index.scss';
-import React from 'react';
+import React, { Component } from 'react'
+import Header from './commonjsx/Header'
+import Footer from './commonjsx/Footer'
+import Home from './components/index/Home'
 
-export default class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div>
-        <h1>It Works Now I Love Is ooo!</h1>
-        <p>This React project just works including <span className={styles.blueBg}>module</span> local styles.</p>
-        <p>Global bootstrap css import works too as you can see on the following button.</p>
-        <p><a className="btn btn-primary btn-lg">Enjoy!</a></p>
+        <Header />
+        <div>
+          {this.props.children || <Home />}
+        </div>
+        <Footer />
       </div>
     )
   }
 }
+
+module.exports = App
