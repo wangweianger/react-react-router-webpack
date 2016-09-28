@@ -1,8 +1,9 @@
 module.exports = {
-  path: 'another',
-  getComponent(nextState, cb) {
-    require.ensure([], (require) => {
-      cb(null, require('./Another'))
-    })
-  }
+  	path: 'another',
+  	// 异步加载
+  	getComponent(nextState, cb) {
+	    require.ensure([], (require) => {
+	      	cb(null, require('./Another'))
+	    })
+	}
 }

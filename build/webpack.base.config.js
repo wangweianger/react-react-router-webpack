@@ -5,9 +5,11 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
 module.exports = {
-	entry: {
-		main:path.resolve(__dirname, '../src/main.js'),
-	},
+	entry:[
+		'webpack-dev-server/client?http://localhost:8888',//资源服务器地址
+    	'webpack/hot/only-dev-server',
+    	path.resolve(__dirname, '../src/main.js'),
+	],
 	output: {
 		path: path.resolve(__dirname, '../dist'),
         publicPath: '/',

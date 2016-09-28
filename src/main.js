@@ -1,28 +1,50 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router,hashHistory} from 'react-router'
+import { Router,hashHistory,browserHistory} from 'react-router'
+
 
 //公用样式文件
 require('./assets/common/css/base.scss'); 
 // commonjsx 样式文件
 require('./commonjsx/commonjsx.scss'); 
 
-// 路由配置
-const rootRoute = {
-  childRoutes: [{
-    path: '/',
-    component: require('./app'),
-    childRoutes: [
-      require('./components/user/route'),
-      require('./components/another/route'),
-    ]
-  }]
-}
+// 配置路由渲染界面
+const rootRoute = [
+    {
+        path: '/',
+        // component: require('./app'),   //同步加载
+        // 异步加载
+        getComponent(nextState, cb) {
+            require.ensure([], (require) => {
+                cb(null, require('./app'))
+            })
+        },
+        // 异步加载
+        indexRoute: { 
+          getComponent(nextState, cb) {
+              require.ensure([], (require) => {
+                  cb(null, require('./components/home/Home'))
+              })
+          }
+        },
+        //  异步加载
+        getChildRoutes(location,callback) {
+            require.ensure([], function (require) {
+              callback(null, [
+                  require('./components/another/route'),
+                  require('./components/user/route'),
+              ])
+            })
+        }
+    }
+]
 
-// 渲染界面
 render((
   <Router
-    history={hashHistory} 
+    history={browserHistory}
     routes={rootRoute}
   />
 ), document.getElementById('app'))
+
+
+
